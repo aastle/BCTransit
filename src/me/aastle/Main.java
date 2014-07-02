@@ -15,6 +15,7 @@ public class Main {
             System.out.println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">");
             System.out.println("</head>");
             System.out.println("<body>");
+
             Document document = Jsoup.connect(url).get();
             for(Element element : document.select("table")){
                 System.out.println(element.toString() + element.text());
